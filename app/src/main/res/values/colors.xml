@@ -7,4 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="blue">#7BCEFF</color>
+    <color name="merahmuda">#B54A97</color>
+    <color name="putih">#FFFFFF</color>
+    <color name="abu">#525252</color>
+    <color name="ungu">#594AB5</color>
+    <color name="abu2">#414141</color>
+    <color name="abu3">#868686</color>
+    <color name="hitam">#313131</color>
+
+
+    <color name="color_policy">#FC4C9CF3</color>
+    <color name="color_login_tfields">#434242</color>
+    <color name="color_issues">#DF000000</color>
 </resources>

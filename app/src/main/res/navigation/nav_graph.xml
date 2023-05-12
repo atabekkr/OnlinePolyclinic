@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.atabekdev.onlinepolyclinic.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_fragmentLogin"
+            app:destination="@id/fragmentLogin"
+            app:popUpTo="@id/nav_graph" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.atabekdev.onlinepolyclinic.ui.login.FragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.atabekdev.onlinepolyclinic.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/donationFragment"
+        android:name="com.atabekdev.onlinepolyclinic.ui.donat.DonationFragment"
+        android:label="fragment_donation"
+        tools:layout="@layout/fragment_donation" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.atabekdev.onlinepolyclinic.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_referenceFragment"
+            app:destination="@id/referenceFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_medicationFragment"
+            app:destination="@id/medicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorsFragment"
+        android:name="com.atabekdev.onlinepolyclinic.ui.doctors.DoctorsFragment"
+        android:label="fragment_doctors"
+        tools:layout="@layout/fragment_doctors" />
+    <fragment
+        android:id="@+id/referenceFragment"
+        android:name="com.atabekdev.onlinepolyclinic.ui.reference.ReferenceFragment"
+        android:label="fragment_reference"
+        tools:layout="@layout/fragment_reference" />
+    <fragment
+        android:id="@+id/medicationFragment"
+        android:name="com.atabekdev.onlinepolyclinic.ui.medication.MedicationFragment"
+        android:label="fragment_medication"
+        tools:layout="@layout/fragment_medication" />
+</navigation>

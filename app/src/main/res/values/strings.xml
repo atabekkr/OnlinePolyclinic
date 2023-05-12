@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Online Polyclinic</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">home</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_Beranda">Beranda</string>
+    <string name="title_Obat">Obat</string>
+    <string name="title_Donasi">Donasi</string>
+    <string name="title_Dokter">Dokter</string>
+    <string name="title_Personal">Personal</string>
 </resources>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="65dp"
+        android:layout_height="57dp"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/iv_profile"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"
+        android:text="Романова Наташа"
+        android:textSize="18sp"
+        android:fontFamily="@font/lato_black"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"
+        android:text="id:101102201"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/lato_black"
+        android:layout_marginStart="16dp" />
+
+    <ImageView
+        android:id="@+id/iv_edit"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_profile"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+        android:layout_margin="16dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile"
+        android:layout_marginHorizontal="16dp" >
+
+        <LinearLayout
+            android:id="@+id/reference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_spravki"
+                app:tint="@color/merahmuda" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Справки"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="#BA000000"
+                android:layout_marginStart="16dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_vaucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?selectableItemBackground"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_vaucher"
+                app:tint="@color/merahmuda" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ваучеры"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="#BA000000"
+                android:layout_marginStart="16dp"
+                app:drawableEndCompat="@drawable/ic_baseline_navigate_next_24" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_notif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?selectableItemBackground"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_notification"
+                app:tint="@color/merahmuda" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Уведомление"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="#BA000000"
+                android:layout_marginStart="16dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_medication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?selectableItemBackground"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_medication"
+                app:tint="@color/merahmuda" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Лекарства"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="#BA000000"
+                android:layout_marginStart="16dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?selectableItemBackground"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_help"
+                app:tint="@color/merahmuda" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Помощь"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="#BA000000"
+                android:layout_marginStart="16dp" />
+
+
+        </LinearLayout>
+
+
+        
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ll_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/merahmuda"
+        android:textColor="@color/white"
+        android:text="выйти" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
