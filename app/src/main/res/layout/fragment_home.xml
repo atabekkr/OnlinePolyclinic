@@ -14,7 +14,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -33,29 +33,29 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.029" />
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/abu2"
-                android:textSize="34sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView10"
-                app:layout_constraintVertical_bias="0.0" />
+                android:hint=" "
+                app:layout_constraintTop_toBottomOf="@id/textView10"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                app:endIconMode="clear_text"
+                >
 
-            <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="354dp"
-                android:layout_height="73dp"
-                android:layout_marginTop="24dp"
-                android:src="@drawable/searchrs"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_til"
+                    android:drawableEnd="@drawable/ic_search"
+                    android:hint="Поиск" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/textView13"
@@ -67,7 +67,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.067"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+                app:layout_constraintTop_toBottomOf="@+id/til_search" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -80,7 +80,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.207"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+                app:layout_constraintTop_toBottomOf="@+id/til_search" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -93,13 +93,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.836"
                 app:layout_constraintStart_toEndOf="@+id/textView15"
-                app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+                app:layout_constraintTop_toBottomOf="@+id/til_search" />
 
 
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="361dp"
-                android:layout_height="100dp"
+                android:layout_height="120dp"
                 android:layout_marginTop="16dp"
                 android:fillViewport="true"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -114,48 +114,89 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/gambar1"
-                        android:layout_width="87dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="30dp"
-                        android:src="@drawable/gelembung" />
-
-                    <ImageView
-                        android:id="@+id/gambar5"
-                        android:layout_width="82dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="30dp"
-                        android:src="@drawable/gelembung4"/>
-
-                    <ImageView
-                        android:id="@+id/gambar3"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
-                        android:src="@drawable/gelembung2" />
+                        android:layout_marginHorizontal="8dp"
+                        android:orientation="vertical" >
 
-                    <ImageView
-                        android:id="@+id/gambar4"
+                        <ImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_doctor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Лор"
+                            android:textColor="@color/color_policy"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
-                        android:src="@drawable/gelembung3" />
+                        android:layout_marginHorizontal="8dp"
+                        android:orientation="vertical" >
+                        <ImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_dantist" />
 
-                    <ImageView
-                        android:id="@+id/gambar2"
-                        android:layout_width="108dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="30dp"
-                        android:src="@drawable/gelembung1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Стоматолог"
+                            android:textColor="@color/color_policy"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="18sp" />
 
-                    <ImageView
-                        android:id="@+id/gambar6"
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="30dp"
-                        android:src="@drawable/gelembung5" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:orientation="vertical" >
+                        <ImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:src="@drawable/ic_birew" />
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Логопед"
+                            android:layout_gravity="center"
+                            android:textColor="@color/color_policy"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:orientation="vertical" >
+                        <ImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:src="@drawable/ic_doctor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Детский врач"
+                            android:textColor="@color/color_policy"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

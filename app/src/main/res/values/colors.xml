@@ -21,4 +21,7 @@
     <color name="color_policy">#FC4C9CF3</color>
     <color name="color_login_tfields">#434242</color>
     <color name="color_issues">#DF000000</color>
+
+    <color name="color_til">#F1F2F3</color>
+
 </resources>

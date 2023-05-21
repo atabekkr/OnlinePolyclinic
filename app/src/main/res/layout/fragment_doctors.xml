@@ -13,85 +13,312 @@
         android:scrollbars="vertical"
         >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/dr1"
-                android:layout_width="371dp"
-                android:layout_height="158dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.457"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.145"
-                app:srcCompat="@drawable/dr1" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" "
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                app:endIconMode="clear_text"
+                >
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_til"
+                    android:drawableEnd="@drawable/ic_search"
+                    android:hint="Поиск" />
 
-            <ImageView
-                android:id="@+id/dr2"
-                android:layout_width="371dp"
-                android:layout_height="158dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.457"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dr1"
-                app:layout_constraintVertical_bias="0.023"
-                app:srcCompat="@drawable/dr2" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageView
-                android:id="@+id/dr3"
-                android:layout_width="371dp"
-                android:layout_height="158dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.476"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dr2"
-                app:layout_constraintVertical_bias="0.045"
-                app:srcCompat="@drawable/dr3"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F6F8FA"
+                android:layout_marginVertical="16dp"
+                >
 
-            <ImageView
-                android:id="@+id/dr4"
-                android:layout_width="371dp"
-                android:layout_height="158dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.476"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dr3"
-                app:layout_constraintVertical_bias="0.045"
-                app:srcCompat="@drawable/dr4" />
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_margin="24dp"
+                    android:src="@drawable/pic_doctor_man"
+                    />
 
-            <ImageView
-                android:id="@+id/dr5"
-                android:layout_width="371dp"
-                android:layout_height="158dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.476"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dr4"
-                app:layout_constraintVertical_bias="0.045"
-                app:srcCompat="@drawable/dr2" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="@id/iv_profile"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+                    app:layout_constraintStart_toEndOf="@id/iv_profile"
+                    android:layout_marginStart="16dp"
+                    >
 
-            <ImageView
-                android:id="@+id/imageView25"
-                android:layout_width="371dp"
-                android:layout_height="73dp"
-                app:layout_constraintBottom_toTopOf="@+id/dr1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.4"
-                app:srcCompat="@drawable/searchdokteranak" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dr. Atabek Daribaev"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Стоматолог"
+                        android:textSize="18sp"
+                        android:textColor="@color/abu"
+                        />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="График работы: 24/7"
+                        android:textSize="16sp"
+                        android:textColor="@color/abu"
+                        />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F6F8FA"
+                android:layout_marginVertical="16dp"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_profile1"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_margin="24dp"
+                    android:src="@drawable/pic_doctor_shape"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="@id/iv_profile1"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_profile1"
+                    app:layout_constraintStart_toEndOf="@id/iv_profile1"
+                    android:layout_marginStart="16dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dr. Steve Thompson"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Лор"
+                        android:textSize="18sp"
+                        android:textColor="@color/abu"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="График работы: 24/7"
+                        android:textSize="16sp"
+                        android:textColor="@color/abu"
+                        />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F6F8FA"
+                android:layout_marginVertical="16dp"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_profile2"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_margin="24dp"
+                    android:src="@drawable/personal_icon"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="@id/iv_profile2"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_profile2"
+                    app:layout_constraintStart_toEndOf="@id/iv_profile2"
+                    android:layout_marginStart="16dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dr. Darya Roman"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Логопед"
+                        android:textSize="18sp"
+                        android:textColor="@color/abu"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="График работы: 24/7"
+                        android:textSize="16sp"
+                        android:textColor="@color/abu"
+                        />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F6F8FA"
+                android:layout_marginVertical="16dp"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_profile4"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_margin="24dp"
+                    android:src="@drawable/ic_person"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="@id/iv_profile4"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_profile4"
+                    app:layout_constraintStart_toEndOf="@id/iv_profile4"
+                    android:layout_marginStart="16dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dr. Tom Holland"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Стоматолог"
+                        android:textSize="18sp"
+                        android:textColor="@color/abu"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="График работы: 24/7"
+                        android:textSize="16sp"
+                        android:textColor="@color/abu"
+                        />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F6F8FA"
+                android:layout_marginVertical="16dp"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_profile5"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_margin="24dp"
+                    android:src="@drawable/ic_lor"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="@id/iv_profile5"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_profile5"
+                    app:layout_constraintStart_toEndOf="@id/iv_profile5"
+                    android:layout_marginStart="16dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dr. Sadio Mane"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Детский врач"
+                        android:textSize="18sp"
+                        android:textColor="@color/abu"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="График работы: 24/7"
+                        android:textSize="16sp"
+                        android:textColor="@color/abu"
+                        />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

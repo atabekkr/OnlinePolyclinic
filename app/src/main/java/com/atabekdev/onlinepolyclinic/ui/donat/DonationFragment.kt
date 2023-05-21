@@ -9,7 +9,6 @@ class DonationFragment : Fragment(R.layout.fragment_donation) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
     }
 
 
